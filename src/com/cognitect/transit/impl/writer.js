@@ -144,11 +144,7 @@ goog.scope(function () {
     };
 
     writer.JSONMarshaller.prototype.emitDouble = function (dbl, asMapKey, cache) {
-        if (asMapKey) {
             return this.emitString(d.ESC, "d", dbl, asMapKey, cache);
-        } else {
-            return dbl;
-        }
     };
 
     writer.JSONMarshaller.prototype.emitBinary = function (b, asMapKey, cache) {

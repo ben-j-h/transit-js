@@ -258,6 +258,24 @@ goog.scope(function() {
     transit.isBigDec = types.isBigDecimal;
 
     /**
+     * Create a transit float.
+     * @method transit.float
+     * @param {string} s
+     *     A string representing an arbitrary precisions decimal value.
+     * @return {com.cognitect.transit.types.TaggedValue} A transit float.
+     */
+    transit.float =  types.floatValue;
+
+    /**
+     * Test if an object is a transit float.
+     * @method transit.isFloat
+     * @param {*} x
+     *     Any JavaScript value.
+     * @return {boolean} true if x is a transit float, false otherwise.
+     */
+    transit.isFloat = types.isFloat;
+
+    /**
      * Create transit keyword.
      * @method transit.keyword
      * @param {string} name A string.

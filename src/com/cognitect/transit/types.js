@@ -120,7 +120,11 @@ goog.scope(function() {
     };
 
     types.floatValue = function(s) {
-        return parseFloat(s);
+        return types.taggedValue("d", s);
+    };
+
+    types.isFloat = function(x) {
+        return ((typeof x === "number") && !isNaN(x) && !(x === Infinity) && (x % 1 != 0)) || ((x instanceof types.TaggedValue) && (x.tag === "d"));
     };
 
     types.bigInteger = function(s) {
@@ -1269,4 +1273,3 @@ goog.scope(function() {
     };
 
 });
-
